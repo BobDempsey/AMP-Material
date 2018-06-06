@@ -1,0 +1,739 @@
+<!doctype html>
+<html amp lang="en" id="top">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+
+  <title>Bob Dempsey ⚡ Web Developer</title>
+  <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#0379c4">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Bob Dempsey ⚡ Web Developer",
+        "datePublished": "2018-05-07T12:02:41Z",
+        "image": [
+        "/img/amp_logo.jpeg"
+        ]
+      }
+    </script>
+
+  <style amp-boilerplate>
+    /* Variables */
+
+    :root {
+      /* Theme Colors */
+      --primary: #0379c4;
+      --primary-light: #5aa8f7;
+      --primary-dark: #004e93;
+      --secondary: #4c5c68;
+      --secondary-light: #788996;
+      --secondary-dark: #23333d;
+      --light-grey: #f1f1f1;
+      /* Theme Colors */
+      --max-width: 95%;
+    }
+
+    /* Variables */
+
+    /* Core */
+
+    * {
+      box-sizing: border-box;
+      outline: none;
+      font-weight: 300;
+      font-family: "Roboto", sans-serif;
+    }
+
+    body {
+      background: var(--light-grey);
+    }
+
+    h1 {
+      font-size: 1.7em;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Core */
+
+    /* Main Content Wrapper */
+
+    main {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+      max-width: var(--max-width);
+      margin: 4.7rem auto auto auto;
+      z-index: 1;
+    }
+
+    /* Main Content Wrapper */
+
+    /* App Bar */
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--primary);
+      padding: 1rem 0rem 0.7rem 0rem;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.28);
+      z-index: 2;
+    }
+
+    header .inner-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      margin-bottom: 1rem;
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    header #brand {
+      justify-self: center;
+    }
+
+    header #brand a {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 400;
+      color: #fff;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    header #brand span {
+      font-weight: 600;
+    }
+
+    header #menuBtn {
+      justify-self: end;
+    }
+
+    header #menuBtn button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    header .fas {
+      color: #fff;
+    }
+
+    header #logo {
+      place-self: start;
+    }
+
+    /* App Bar */
+
+    /* Sidebar */
+
+    #sidebar-header {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+
+    #sidebar-header h3 {
+      font-weight: 350;
+      text-transform: uppercase;
+      margin-left: 2.1rem;
+    }
+
+    #closeMenuBtn {
+      color: rgba(0, 0, 0, 0.58);
+      font-size: 200%;
+      justify-self: end;
+      padding: 0.35rem 2.5rem 0.45rem 2.5rem;
+      cursor: pointer;
+    }
+
+    #closeMenuBtn:hover {
+      background: var(--light-grey);
+    }
+
+    #sidebar {
+      display: grid;
+      grid-template-columns: 1fr;
+      text-transform: uppercase;
+      background: #fff;
+    }
+
+    #sidebar ul {
+      margin-top: 0rem;
+      padding-left: 0px;
+    }
+
+    #sidebar li {
+      padding: 1rem 0rem;
+    }
+
+    #sidebar li span {
+      padding: 0rem 1.3rem;
+    }
+
+    #sidebar li:hover {
+      background: var(--light-grey);
+    }
+
+    #sidebar li:hover:nth-last-of-type(-n+2) {
+      cursor: default;
+      background: none;
+    }
+
+    #sidebar .fas,
+    #sidebar .fab {
+      margin-right: 1.5rem;
+    }
+
+    #sidebar hr {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+      width: 85%;
+      margin: 1.5rem;
+    }
+
+    #sidebar a {
+      color: rgba(0, 0, 0, 0.6);
+      font-weight: 400;
+    }
+
+    #sidebar .social-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      place-items: center;
+      margin-left: 1.2rem;
+    }
+
+    #sidebar .social-icons .fab {
+      transition-timing-function: ease;
+      transition-duration: 200ms;
+    }
+
+    #sidebar .social-icons .fab:hover {
+      color: var(--primary-dark);
+    }
+
+    /* Sidebar */
+
+    /* Cards */
+
+    .card {
+      /* width: 100%; */
+      background: #fff;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+      border-radius: 4px;
+      padding: 0.9rem 1.5rem 1.65rem 1.5rem;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.54);
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .card a {
+      font-weight: 350;
+    }
+
+    /* Cards */
+
+    /* Hero Card */
+
+    #hero {
+      background: url(/img/heroBG.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+
+    #hero h1 {
+      font-size: 2em;
+    }
+
+    #hero h3 {
+      margin: 0.5rem auto;
+    }
+
+    #hero p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Hero Card */
+
+    /* Page Nav Cards */
+
+    .pageNav {
+      grid-column-start: 1;
+      grid-column-end: -1;
+      display: grid;
+      grid-template-columns: 1fr;
+      color: #fff;
+      grid-column-gap: 1em;
+
+    }
+
+    .pageNav>div {
+      padding: 0rem 1.5rem;
+      background: var(--secondary-dark);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+      border-radius: 4px;
+    }
+
+    /* Page Nav Cards */
+
+    /* Footer */
+
+    footer {
+      background: var(--secondary);
+      padding: 1rem 0rem;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #fff;
+    }
+
+    footer .inner-wrapper {
+      display: grid;
+      grid-column-gap: 1rem;
+      grid-template-columns: 3fr 1fr 1fr;
+      align-items: center;
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    footer .social-icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 20px;
+    }
+
+    footer #backTopBtn {
+      justify-self: center;
+    }
+
+    footer .social-icons .fab {
+      transition-timing-function: ease;
+      transition-duration: 200ms;
+    }
+
+    footer .social-icons .fab:hover {
+      color: var(--secondary-light);
+    }
+
+    /* Footer */
+
+    /* Media Queries */
+
+    @media(min-width:600px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      footer #backTopBtn {
+        justify-self: end;
+      }
+
+      footer .inner-wrapper {
+        grid-template-columns: 2fr 2fr 1fr;
+      }
+
+      footer .social-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: end;
+      }
+
+      .pageNav {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media(min-width:981px) {
+      main {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      #hero p {
+        margin-bottom: 2.2rem;
+      }
+      footer .inner-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      footer .social-icons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: end;
+      }
+      .pageNav {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Media Queries */
+  </style>
+  </noscript>
+</head>
+
+<body>
+  <!-- App Bar & Nav -->
+  <header>
+    <div class="inner-wrapper">
+      <div id="logo">
+        <a href="https://bobd.me/">
+          <amp-img src="https://bobd.me/img/amp_logo.jpeg" width="25" height="25" layout="intrinsic" alt="AMP"></amp-img>
+        </a>
+      </div>
+      <div id="brand">
+        <a href="https://bobd.me/">Bob
+          <span>Dempsey</span>
+        </a>
+      </div>
+      <div id="menuBtn">
+        <button on="tap:sidebar.toggle">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- App Bar & Nav -->
+
+  <!-- Main Content Wrapper-->
+  <main>
+
+    <!-- Hero Card -->
+    <div class="card" id="hero">
+      <h1>Portfolio</h1>
+      <h3>Custom WordPress & Bootstrap Applications</h3>
+      <p>JS, PHP, Firebase, CSS Grid, Flexbox, Material Design</p>
+    </div>
+    <!-- Hero Card -->
+
+
+    <!-- Page Nav > Personal Apps -->
+    <div class="pageNav">
+      <div>
+        <h3>Personal Apps</h3>
+      </div>
+    </div>
+    <!-- Page Nav > Personal Apps -->
+
+    <!-- OMDB Card -->
+    <div class="card">
+      <a href="/apps/omdb-movie-search/" target="_blank">
+        <h1>OMDB Movie Search</h1>
+      </a>
+      <p>Search for any movie using the OMDB API, jQuery, Axios, Bootstrap 4, Local Session Storage, & Material Design.
+      </p>
+    </div>
+    <!-- OMDB Card -->
+
+    <!-- Number Facts Card -->
+    <div class="card">
+      <a href="/apps/number-facts/" target="_blank">
+        <h1>Number Facts Generator</h1>
+      </a>
+      <p>Generate a random fact about any number using the Numbers Fetch API, JavaScript, & Material Design.
+      </p>
+    </div>
+    <!-- Number Facts Card -->
+
+    <!-- Image Gallery Card -->
+    <div class="card">
+      <a href="/apps/image-gallery/" target="_blank">
+        <h1>Modern Image Gallery</h1>
+      </a>
+      <p>A modern image gallery using ES6, CSS Grid, CSS Variables, & Material Design.
+      </p>
+    </div>
+    <!-- Image Gallery Card -->
+
+    <!-- Page Nav > Client Websites -->
+    <div class="pageNav">
+      <div>
+        <h3>Client Websites</h3>
+      </div>
+    </div>
+    <!-- Page Nav > Client Websites -->
+
+    <!-- SAV Card -->
+    <div class="card">
+      <a href="https://silentauctionvacations.com" target="_blank">
+        <h1>Silent Auction Vacations</h1>
+      </a>
+      <p>Complete Web Presence Overhaul (WP), Custom Forms & Data Flows (Formidable), Privileged Content (WPMembers), Opt Ins
+        & Mailing Lists (MailChimp), Content & Blog Creation, SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP), CRM Integration & Customization (Zoho), G Suite Mgmt</p>
+    </div>
+    <!-- SAV Card -->
+
+    <!-- MRS Card -->
+    <div class="card">
+      <a href="https://myrealestatesystem.com" target="_blank">
+        <h1>My Real Estate System</h1>
+      </a>
+      <p>All Websites & Web Apps Reworked (WP), Custom Forms & Data Flows (Formidable), Privileged Content (WPMembers), Opt
+        Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb), Management & Backups
+        (ManageWP), CRM Integration & Customization (Active Campaign)
+      </p>
+    </div>
+    <!-- MRS Card -->
+
+    <!-- Sunlight Card -->
+    <div class="card">
+      <a href="https://www.sunlightcreditrepair.com/" target="_blank">
+        <h1>Sunlight Credit Repair</h1>
+      </a>
+      <p>Website Reworked (WP), Custom Forms (Formidable, Privileged Content (WPMembers), Opt Ins & Mailing Lists (MailChimp),
+        SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb), Management & Backups (ManageWP), CRM Integration & Customization
+        (Active Campaign)
+      </p>
+    </div>
+    <!-- Sunlight Card -->
+
+    <!-- 2B Card -->
+    <div class="card">
+      <a href="https://2banonymous.com/" target="_blank">
+        <h1>2BAnonymous</h1>
+      </a>
+      <p>Company Website (WP), Opt Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP)
+      </p>
+    </div>
+    <!-- 2B Card -->
+
+    <!-- Michigan Hearing Card -->
+    <div class="card">
+      <a href="http://michiganhearing.com/" target="_blank">
+        <h1>Michigan Hearing</h1>
+      </a>
+      <p>Company Website (WP), Opt Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP)
+      </p>
+    </div>
+    <!-- Michigan Hearing Card -->
+
+    <!-- California Jam Card -->
+    <div class="card">
+      <a href="https://www.californiajam.org/" target="_blank">
+        <h1>California Jam</h1>
+      </a>
+      <p>Company Website (WP), Opt Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP)
+      </p>
+    </div>
+    <!-- California Jam Card -->
+
+    <!-- Sufii Card -->
+    <div class="card">
+      <a href="http://www.sufiidayspa.com/" target="_blank">
+        <h1>Sufii Day Spa</h1>
+      </a>
+      <p>Company Website (WP), Opt Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP)
+      </p>
+    </div>
+    <!-- Sufii Card -->
+
+    <!-- Justin Ailey Card -->
+    <div class="card">
+      <a href="https://justinaileydfwrealtor.com/" target="_blank">
+        <h1>Justin Ailey</h1>
+      </a>
+      <p>Personal Website (WP), Opt Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP)
+      </p>
+    </div>
+    <!-- Justin Ailey Card -->
+
+    <!-- Sharifi Card -->
+    <div class="card">
+      <a href="http://saumsharifi.com/" target="_blank">
+        <h1>Sharifi Motivations</h1>
+      </a>
+      <p>Company Website (WP), Opt Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP)
+      </p>
+    </div>
+    <!-- Sharifi Card -->
+
+    <!-- Pearl White Card -->
+    <div class="card">
+      <a href="https://www.pearlwhiteevents.com/home" target="_blank">
+        <h1>Pearl White Events</h1>
+      </a>
+      <p>Company Website (WP), Opt Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP)
+      </p>
+    </div>
+    <!-- Pearl White Card -->
+
+    <!-- Riant Card -->
+    <div class="card">
+      <a href="http://www.riantfilms.com/" target="_blank">
+        <h1>Riant Films</h1>
+      </a>
+      <p>Company Website (WP), Opt Ins & Mailing Lists (MailChimp), SEO (Yoast), Search Console, Analytics, Hosting (LiquidWeb),
+        Management & Backups (ManageWP)
+      </p>
+    </div>
+    <!-- Riant Card -->
+
+  </main>
+  <!-- Main Content Wrapper -->
+
+  <footer>
+    <div class="inner-wrapper">
+      <div id="copyright"> &copy; 2018 ⚡
+        <a href="/">Bob Dempsey</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/bob-dempsey/" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://codepen.io/BobDempsey/" target="_blank">
+          <i class="fab fa-codepen"></i>
+        </a>
+        <a href="https://stackoverflow.com/users/6797367/bob-dempsey" target="_blank">
+          <i class="fab fa-stack-overflow"></i>
+        </a>
+        <a href="https://github.com/BobDempsey" target="_blank">
+          <i class="fab fa-github "></i>
+        </a>
+      </div>
+      <div id="backTopBtn">
+        <a href="#top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+    <div id="sidebar-header">
+      <h3>Bob Dempsey</h3>
+      <div id="closeMenuBtn" on="tap:sidebar.close">&times;</div>
+    </div>
+    <ul>
+      <li>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/bob-dempsey/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://codepen.io/BobDempsey/" target="_blank">
+            <i class="fab fa-codepen"></i>
+          </a>
+          <a href="https://stackoverflow.com/users/6797367/bob-dempsey" target="_blank">
+            <i class="fab fa-stack-overflow"></i>
+          </a>
+          <a href="https://github.com/BobDempsey" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </li>
+      <li>
+        <a href="https://bobd.me/">
+          <span>&nbsp;</span>
+          <i class="fas fa-home"></i>Home</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/portfolio">
+          <span>&nbsp;</span>
+          <i class="fas fa-th"></i>Portfolio</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/skills">
+          <span>&nbsp;</span>
+          <i class="fas fa-code"></i>Skills</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/education">
+          <span>&nbsp;</span>
+          <i class="fas fa-graduation-cap"></i>Education</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/experience">
+          <span>&nbsp;</span>
+          <i class="fas fa-briefcase"></i>Experience</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/references">
+          <span>&nbsp;</span>
+          <i class="fas fa-comments"></i>References</a>
+      </li>
+      <li>
+        <a href="https://drive.google.com/file/d/1lWxlG0bf39xyEe1cIKnWUN0xRvGtnHnA/view?usp=sharing
+        " target="_blank">
+          <span>&nbsp;</span>
+          <i class="fas fa-file-pdf"></i>Resume</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/contact">
+          <span>&nbsp;</span>
+          <i class="fas fa-envelope"></i>Contact</a>
+      </li>
+      <hr>
+      <li>
+        <a href="https://bobd.me/wp/cv/">
+          <span>&nbsp;</span>
+          <i class="fab fa-wordpress"></i>WordPress CV</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/wp/blog/">
+          <span>&nbsp;</span>
+          <i class="fas fa-th-list"></i>Blog</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/podcast">
+          <span>&nbsp;</span>
+          <i class="fas fa-podcast"></i>Podcast</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/articles">
+          <span>&nbsp;</span>
+          <i class="fas fa-pencil-alt"></i>Published Articles</a>
+      </li>
+      <li>
+        <a href="http://eepurl.com/dnxxUL" target="_blank">
+          <span>&nbsp;</span>
+          <i class="fas fa-bell"></i>Subscribe</a>
+      </li>
+      <li>
+        <a href="https://bobd.me/about">
+          <span>&nbsp;</span>
+          <i class="fas fa-info-circle"></i>About</a>
+      </li>
+      <li>
+        <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24"> </amp-fit-text>
+      </li>
+      <li>
+        <amp-fit-text width="220" height="20" layout="responsive" max-font-size="24"> Nav item 3 - &lt;amp-fit-text&gt; longer text </amp-fit-text>
+      </li>
+    </ul>
+  </amp-sidebar>
+
+</body>
+
+</html>

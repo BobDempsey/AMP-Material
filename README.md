@@ -1,2 +1,3 @@
 # AMP-Material
-Material Design Website w/AMP
+
+A very lightweight portfolio website made with Google's Accelerated Mobile Pages (AMP), CSS Grid, CSS Variables, & Material Design.
